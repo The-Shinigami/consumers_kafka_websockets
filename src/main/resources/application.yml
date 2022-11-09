@@ -1,0 +1,12 @@
+server:
+  port : 8082
+consumer:
+  bootstrap-servers: localhost:9092
+  key-deserializer: org.apache.kafka.common.serialization.IntegerDeserializer
+  value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+  auto-offset-reset: earliest
+
+spring:
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
